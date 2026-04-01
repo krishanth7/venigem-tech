@@ -346,97 +346,186 @@ body {
 }
 
 /* ==================== RESPONSIVE ARCHITECTURE ==================== */
+
+/* Tablet & Smaller Desktop */
 @media (max-width: 1024px) {
     .pro-container, .pro-container.reverse {
         flex-direction: column;
-        text-align: center;
-        gap: 50px;
+        gap: 60px;
     }
-    .pro-meta {
-        justify-content: center;
-    }
-    .pro-specs-list li {
-        text-align: left;
-    }
-    .pro-actions {
-        justify-content: center;
-        flex-direction: column;
-    }
-    .pro-btn-primary, .pro-btn-link {
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-    }
+    
     .hero-title {
         font-size: 4rem;
     }
+    
     .cta-info h2 {
         font-size: 3rem;
     }
+    
     .cta-wide-box {
         padding: 60px 40px;
     }
 }
 
+/* Highly Professional Mobile View (Phones) */
 @media (max-width: 768px) {
+    
+    /* Hero - Left Aligned & Tight */
     .products-hero {
-        padding: 160px 24px 80px;
+        padding: 130px 24px 60px;
+        align-items: flex-end; /* Push text down gracefully */
+        text-align: left;
     }
+    
+    .hero-content {
+        align-items: flex-start;
+        text-align: left;
+        margin: 0;
+    }
+    
+    .hero-pre-title {
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+    
     .hero-title {
-        font-size: 2.8rem;
-        letter-spacing: -1px;
+        font-size: 3.2rem;
+        letter-spacing: -1.5px;
+        line-height: 1.05;
+        margin-bottom: 24px;
     }
+    
     .hero-desc {
         font-size: 1.1rem;
-        padding: 0 10px;
+        padding: 0;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.85);
     }
+    
+    /* Product Sections - Editorial Structure */
     .pro-section {
-        padding: 80px 0;
+        padding: 60px 0 80px; 
     }
-    .pro-container {
+    
+    .pro-container, .pro-container.reverse {
         padding: 0 24px;
         gap: 40px;
+        text-align: left;
     }
+    
+    .pro-meta {
+        justify-content: flex-start;
+        margin-bottom: 24px;
+    }
+    
     .pro-title {
         font-size: 2.5rem;
+        letter-spacing: -1px;
+        line-height: 1.1;
         margin-bottom: 20px;
     }
+    
     .pro-desc {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
         margin-bottom: 30px;
+        color: var(--text-secondary);
     }
-    .pro-specs-list {
-        margin: 0 0 30px 0;
+    
+    /* Edge-to-Edge Image on Mobile */
+    .pro-visual {
+        margin: 0 -24px; /* Pull visual to screen edges */
+        width: 100vw;
     }
-    .pro-specs-list li {
-        flex-direction: column;
-        gap: 8px;
-        align-items: flex-start;
-        padding: 16px 0;
-    }
+    
     .pro-image-wrapper {
-        aspect-ratio: 1/1;
-        border-radius: 12px;
-        width: 100%;
+        aspect-ratio: 4/3;
+        border-radius: 0;
+        border: none;
     }
+    
+    .pro-image-wrapper::after {
+        display: none; /* remove inner shadow on edge-to-edge */
+    }
+    
+    /* Technical Specs - Sleek Rows */
+    .pro-specs-list {
+        margin: 0 0 40px 0;
+        border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    
+    .pro-specs-list li {
+        flex-direction: row; /* Keep side-by-side for pro look */
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        gap: 16px;
+    }
+    
+    .pro-specs-list span {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+    }
+    
+    .pro-specs-list strong {
+        font-size: 0.95rem;
+        text-align: right;
+    }
+    
+    /* Buttons - Full Width Stacking */
+    .pro-actions {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .pro-btn-primary {
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .pro-btn-link {
+        justify-content: center;
+        padding: 12px;
+        background: rgba(0,0,0,0.03);
+        border-radius: 4px;
+    }
+    
+    /* CTA Banner - Powerful & Concise */
     .cta-banner {
-        padding: 60px 20px;
+        padding: 60px 24px;
+        background: var(--bg-light); /* Make the banner pop off the white page */
     }
+    
     .cta-wide-box {
         padding: 50px 24px;
-        border-radius: 16px;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(5, 152, 153, 0.1);
+        text-align: left;
+        align-items: flex-start;
     }
+    
+    .cta-info {
+        margin-bottom: 30px;
+    }
+    
     .cta-info h2 {
         font-size: 2.2rem;
+        line-height: 1.15;
+        margin-bottom: 16px;
     }
+    
     .cta-info p {
         font-size: 1.1rem;
-        margin-bottom: 30px;
-        padding: 0 10px;
+        padding: 0;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
     }
+    
     .btn-cta-wide {
         width: 100%;
-        box-sizing: border-box;
-        padding: 20px 10px;
+        text-align: center;
+        padding: 18px;
     }
 }
