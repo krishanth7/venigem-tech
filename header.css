@@ -58,7 +58,7 @@ ul {
     height: 40px;
     background-color: var(--brand-accent);
     color: #ffffff;
-    z-index: 1002;
+    z-index: 999990;
     font-size: 13px;
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ ul {
     top: 40px;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 999995;
     padding: 24px 0;
     transition: all 0.4s var(--transition);
     background-color: var(--bg-header);
@@ -140,7 +140,7 @@ ul {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 1001;
+    z-index: 999996;
 }
 
 .main-logo-image {
@@ -307,7 +307,7 @@ ul {
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 999999;
 }
 
 .menu-toggle .bar {
@@ -344,7 +344,7 @@ ul {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 999998;
     display: flex;
     flex-direction: column;
     align-items: center;
