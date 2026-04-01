@@ -30,6 +30,8 @@ body {
     background: var(--brand-dark);
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     overflow: hidden;
     color: #fff;
     text-align: center;
