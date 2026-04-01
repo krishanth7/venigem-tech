@@ -667,7 +667,13 @@ body {
 
 .modal-scroll-area {
     overflow-y: auto;
-    padding: 60px; /* Padding for the inner content as requested */
+    padding: 60px;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.modal-scroll-area::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .modal-close {
@@ -744,11 +750,11 @@ body {
     font-weight: 400;
 }
 
-/* 5 Column Specialized List */
+/* 5 Row Specialized List */
 .modal-specs-5col {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr; /* Shifted to 5 Rows as requested */
+    gap: 15px;
     list-style: none;
     padding: 0;
     margin-bottom: 40px;
@@ -817,12 +823,10 @@ body {
 @media screen and (max-width: 1024px) {
     .modal-overlay-content { width: 90%; height: 95vh; margin: 20px; }
     .modal-grid { grid-template-columns: 1fr; gap: 30px; }
-    .modal-specs-5col { grid-template-columns: repeat(2, 1fr); }
     .modal-heading { font-size: 2rem; }
 }
 
 @media screen and (max-width: 768px) {
     .modal-overlay-content { width: 95%; margin: 10px; }
     .modal-scroll-area { padding: 30px; }
-    .modal-specs-5col { grid-template-columns: 1fr; }
 }
