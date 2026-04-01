@@ -370,144 +370,210 @@ body {
 /* Highly Professional Mobile View (Phones) */
 @media (max-width: 768px) {
     
-    /* Hero - Left Aligned & Tight */
+    /* Cinematic Hero - Bottom Aligned & Full Height */
     .products-hero {
-        padding: 130px 24px 60px;
-        align-items: flex-end; /* Push text down gracefully */
+        padding: 0 24px 80px;
+        min-height: 85vh;
+        align-items: flex-end;
         text-align: left;
+        background-position: top center;
     }
     
     .hero-content {
         align-items: flex-start;
         text-align: left;
         margin: 0;
+        width: 100%;
+        background: rgba(2, 6, 23, 0.4);
+        padding: 30px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
     }
     
     .hero-pre-title {
-        margin-bottom: 20px;
-        letter-spacing: 3px;
+        margin-bottom: 15px;
+        letter-spacing: 5px;
+        font-size: 0.75rem;
     }
     
     .hero-title {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         letter-spacing: -1.5px;
-        line-height: 1.05;
-        margin-bottom: 24px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+        text-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
     
     .hero-desc {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         padding: 0;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
     }
     
-    /* Product Sections - Editorial Structure */
+    /* Product Sections - Overlapping App Interface */
     .pro-section {
-        padding: 60px 0 80px; 
+        padding: 0; 
+        margin-bottom: 40px;
+        border: none;
+        background: var(--bg-light);
     }
     
     .pro-container, .pro-container.reverse {
-        padding: 0 24px;
-        gap: 40px;
+        padding: 0;
+        gap: 0;
         text-align: left;
+        flex-direction: column-reverse; /* Force visual to top */
     }
     
+    /* The Visual Side - Locked to Top */
+    .pro-visual {
+        width: 100%;
+        margin: 0;
+        height: 45vh; /* Massive cinematic image */
+        position: relative;
+    }
+    
+    .pro-image-wrapper {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: auto; /* Let height dictate */
+        border-radius: 0;
+        border: none;
+    }
+    
+    .pro-image-wrapper img {
+        object-position: center 30%; /* Focus slightly above center */
+    }
+    
+    /* The Content Side - Overlapping Glass Card */
+    .pro-content {
+        background: #ffffff;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        z-index: 10;
+        margin-top: -60px; /* Pulls the card OVER the image */
+        border-radius: 30px 30px 0 0;
+        padding: 40px 24px 60px;
+        box-shadow: 0 -15px 40px rgba(0,0,0,0.08);
+    }
+    
+    .pro-section.bg-light .pro-content {
+        background: #ffffff; /* Always keep card white even if section is light */
+    }
+    
+    /* Meta Index as a Floating Badge */
     .pro-meta {
         justify-content: flex-start;
         margin-bottom: 24px;
+        background: rgba(5, 152, 153, 0.08); /* Brand blue tint */
+        display: inline-flex;
+        padding: 8px 16px;
+        border-radius: 50px;
+        border: 1px solid rgba(5, 152, 153, 0.2);
+    }
+    
+    .pro-index {
+        font-size: 0.9rem;
+        color: var(--brand-dark);
+    }
+    
+    .pro-divider {
+        width: 20px;
+        background: var(--brand-blue);
+    }
+    
+    .pro-category {
+        font-size: 0.7rem;
     }
     
     .pro-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         letter-spacing: -1px;
-        line-height: 1.1;
-        margin-bottom: 20px;
+        line-height: 1.15;
+        margin-bottom: 16px;
     }
     
     .pro-desc {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.6;
         margin-bottom: 30px;
         color: var(--text-secondary);
     }
     
-    /* Edge-to-Edge Image on Mobile */
-    .pro-visual {
-        margin: 0 -24px; /* Pull visual to screen edges */
-        width: 100vw;
-    }
-    
-    .pro-image-wrapper {
-        aspect-ratio: 4/3;
-        border-radius: 0;
-        border: none;
-    }
-    
-    .pro-image-wrapper::after {
-        display: none; /* remove inner shadow on edge-to-edge */
-    }
-    
-    /* Technical Specs - Sleek Rows */
+    /* Technical Specs - Sleek Modern Rows */
     .pro-specs-list {
         margin: 0 0 40px 0;
-        border-top: 1px solid rgba(0,0,0,0.08);
+        border-top: 1px solid rgba(0,0,0,0.05);
+        background: rgba(248, 250, 252, 0.5); /* Very subtle table bg */
+        border-radius: 12px;
+        padding: 0 16px;
     }
     
     .pro-specs-list li {
-        flex-direction: row; /* Keep side-by-side for pro look */
+        flex-direction: row; 
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         padding: 16px 0;
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-        gap: 16px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        gap: 20px;
+    }
+    
+    .pro-specs-list li:last-child {
+        border-bottom: none;
     }
     
     .pro-specs-list span {
-        font-size: 0.95rem;
-        color: var(--text-secondary);
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        min-width: 100px;
     }
     
     .pro-specs-list strong {
         font-size: 0.95rem;
         text-align: right;
+        color: var(--brand-dark);
     }
     
-    /* Buttons - Full Width Stacking */
+    /* Buttons - Architectural Stack */
     .pro-actions {
         flex-direction: column;
-        gap: 16px;
+        gap: 12px;
         align-items: stretch;
     }
     
     .pro-btn-primary {
         text-align: center;
-        padding: 16px;
+        padding: 18px;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        box-shadow: 0 10px 25px rgba(2, 6, 23, 0.15);
     }
     
     .pro-btn-link {
         justify-content: center;
-        padding: 12px;
-        background: rgba(0,0,0,0.03);
-        border-radius: 4px;
+        padding: 18px;
+        background: transparent;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 12px;
     }
     
-    /* CTA Banner - Powerful & Concise */
+    /* CTA Banner - Powerful & Overlapping */
     .cta-banner {
-        padding: 60px 24px;
-        background: var(--bg-light); /* Make the banner pop off the white page */
+        padding: 40px 20px 80px;
+        background: var(--bg-light); 
     }
     
     .cta-wide-box {
-        padding: 50px 24px;
-        border-radius: 12px;
-        box-shadow: 0 20px 40px rgba(5, 152, 153, 0.1);
+        padding: 60px 24px;
+        border-radius: 24px;
+        box-shadow: 0 20px 50px rgba(5, 152, 153, 0.15);
         text-align: left;
         align-items: flex-start;
-    }
-    
-    .cta-info {
-        margin-bottom: 30px;
+        background: linear-gradient(135deg, var(--brand-dark) 0%, #061e38 100%);
     }
     
     .cta-info h2 {
@@ -518,14 +584,13 @@ body {
     
     .cta-info p {
         font-size: 1.1rem;
-        padding: 0;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.85);
     }
     
     .btn-cta-wide {
         width: 100%;
         text-align: center;
-        padding: 18px;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 0.95rem;
     }
 }
