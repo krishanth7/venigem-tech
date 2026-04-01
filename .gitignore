@@ -1,0 +1,12 @@
+node_modules/
+.next/
+dist/
+build/
+.env
+*.png
+*.jpg
+*.jpeg
+*.ico
+*.db
+*.pyc
+.cache/
