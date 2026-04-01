@@ -339,11 +339,12 @@ body {
     transform: translateY(-5px);
 }
 
-/* Responsive */
+/* ==================== RESPONSIVE ARCHITECTURE ==================== */
 @media (max-width: 1024px) {
     .pro-container, .pro-container.reverse {
         flex-direction: column;
         text-align: center;
+        gap: 50px;
     }
     .pro-meta {
         justify-content: center;
@@ -355,13 +356,74 @@ body {
         justify-content: center;
         flex-direction: column;
     }
+    .pro-btn-primary, .pro-btn-link {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     .cta-info h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .cta-wide-box {
-        padding: 60px 30px;
+        padding: 60px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-hero {
+        padding: 160px 20px 80px;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+    .hero-desc {
+        font-size: 1.1rem;
+    }
+    .pro-section {
+        padding: 80px 0;
+    }
+    .pro-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .pro-desc {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+    .pro-specs-list {
+        margin: 0 0 30px 0;
+    }
+    .pro-specs-list li {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        padding: 16px 0;
+    }
+    .pro-image-wrapper {
+        aspect-ratio: 1/1;
+        border-radius: 12px;
+    }
+    .cta-banner {
+        padding: 60px 20px;
+    }
+    .cta-wide-box {
+        padding: 50px 20px;
+        border-radius: 16px;
+    }
+    .cta-info h2 {
+        font-size: 2.2rem;
+    }
+    .cta-info p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    .btn-cta-wide {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 10px;
     }
 }
