@@ -4,6 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileNav = document.getElementById('mobileNav');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const body = document.body;
+    const navLinks = document.querySelectorAll('.nav-link, .m-link');
+
+    const normalizePathname = (pathname) => {
+        let normalized = (pathname || '').toLowerCase();
+
+        if (!normalized || normalized === '/') {
+            return '/';
+        }
+
+        normalized = normalized.replace(/\/+$/, '');
+        const segments = normalized.split('/');
+        const lastSegment = segments[segments.length - 1];
+
+        if (lastSegment === 'index.html') {
+            return '/';
+        }
+
+        return lastSegment;
+    };
+
+    const currentPath = normalizePathname(window.location.pathname);
+
+    navLinks.forEach((link) => {
+        const linkUrl = new URL(link.getAttribute('href'), window.location.origin);
+        const linkPath = normalizePathname(linkUrl.pathname);
+        const isActive = linkPath === currentPath;
+        link.classList.toggle('active', isActive);
+    });
 
     // Smooth architectural sticky header
     window.addEventListener('scroll', () => {
