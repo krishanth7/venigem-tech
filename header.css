@@ -130,6 +130,15 @@
     width: 100%;
 }
 
+.nav-link:focus-visible,
+.m-link:focus-visible,
+.btn-primary:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
 /* --- Action Button --- */
 .btn-primary {
     padding: 12px 28px;
