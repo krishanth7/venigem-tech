@@ -5,33 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const body = document.body;
 
-    // Smooth sticky header effect
+    // Smooth architectural sticky header
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
+        if (window.scrollY > 40) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
     });
 
-    // Initial check for scroll position
-    if (window.scrollY > 20) {
-        header.classList.add('scrolled');
+    // Mobile Menu Animation Controller
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            body.style.overflow = 'hidden';
+            
+            // Stagger animation for links
+            const links = mobileNav.querySelectorAll('.m-link');
+            links.forEach((link, idx) => {
+                link.style.setProperty('--item-index', idx);
+            });
+        });
     }
 
-    // Mobile menu toggle functionality
-    menuToggle.addEventListener('click', () => {
-        mobileNav.classList.add('active');
-        body.style.overflow = 'hidden';
-    });
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            body.style.overflow = '';
+        });
+    }
 
-    // Close mobile menu
-    closeMenuBtn.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        body.style.overflow = '';
-    });
-
-    // Close mobile menu when a link is clicked
+    // Close on link click
     const mobileLinks = document.querySelectorAll('.m-link, .mobile-quote');
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
