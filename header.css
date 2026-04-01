@@ -417,10 +417,22 @@ ul {
 
     .main-header {
         top: 0;
-        padding: 28px 0; /* Increased from default */
-        min-height: 90px; /* Ensure 100% visibility as requested */
+        padding: 24px 0; /* Slightly reduced padding */
+        min-height: 80px; /* Force minimum height for visibility */
         display: flex;
         align-items: center;
+    }
+
+    .header-container {
+        padding: 0 50px !important; /* Force 50px side margins as requested */
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        justify-content: space-between !important;
+    }
+
+    .header-actions {
+        gap: 0; /* Remove gap that could push toggle too far left */
     }
 }
 
