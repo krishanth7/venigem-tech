@@ -269,15 +269,48 @@ body {
     box-shadow: 0 10px 20px rgba(5,152,153,0.3);
 }
 
-.pro-btn-link {
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
+.pro-btn-secondary {
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
+    gap: 15px;
+    background: transparent;
+    border: 1.5px solid var(--text-primary);
+    color: var(--text-primary);
+    padding: 20px 40px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pro-btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--text-primary);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+}
+
+.pro-btn-secondary:hover {
+    color: #fff;
+}
+
+.pro-btn-secondary:hover::before {
+    width: 100%;
+}
+
+.pro-btn-secondary i {
+    font-size: 14px;
 }
 
 .pro-btn-link:hover {
@@ -750,43 +783,58 @@ body {
     font-weight: 400;
 }
 
-/* 5 Row Specialized List */
-.modal-specs-5col {
-    display: grid;
-    grid-template-columns: 1fr; /* Shifted to 5 Rows as requested */
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin-bottom: 40px;
+/* Professional Corporate Briefing Stack */
+.modal-briefing-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 50px;
 }
 
-.modal-specs-5col li {
-    padding: 24px;
-    border-radius: 20px;
+.brief-row {
+    display: flex;
+    gap: 25px;
+    padding: 28px;
     background: #f8fafc;
-    border-top: 4px solid var(--badge-color);
+    border-left: 5px solid var(--brand-blue);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    align-items: center;
 }
 
-.badge-label {
-    display: block;
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 8px;
+.brief-row:hover {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transform: translateX(10px);
 }
 
-.badge-value {
+.brief-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: var(--brand-blue);
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.brief-info h3 {
     font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 800;
-    color: var(--badge-color);
-    margin-bottom: 8px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
 }
 
-.modal-specs-5col li p {
-    font-size: 12px;
+.brief-info p {
+    font-size: 0.95rem;
     color: var(--text-secondary);
+    line-height: 1.6;
     margin: 0;
 }
 
