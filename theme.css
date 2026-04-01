@@ -1,0 +1,92 @@
+/* Global corporate theme layer */
+:root {
+    --corp-bg: #f4f6f8;
+    --corp-surface: #ffffff;
+    --corp-text: #1f2937;
+    --corp-muted: #5f6b7a;
+    --corp-border: #d9e1ea;
+    --corp-primary: #00a8d6;
+    --corp-primary-dark: #007fa3;
+    --corp-radius: 10px;
+    --corp-shadow: 0 16px 40px rgba(16, 24, 40, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Outfit', Arial, sans-serif;
+    color: var(--corp-text);
+    background: linear-gradient(180deg, #f8fafc 0%, var(--corp-bg) 100%);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--corp-primary-dark);
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    position: relative;
+}
+
+.container,
+[class$="-container"],
+[class*=" container"] {
+    max-width: 1320px;
+}
+
+.card,
+.legal-card,
+.contact-form-card,
+.quote-form-card,
+.product-card,
+.service-card {
+    background: var(--corp-surface);
+    border: 1px solid var(--corp-border);
+    border-radius: var(--corp-radius);
+    box-shadow: var(--corp-shadow);
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+input,
+select,
+textarea {
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+.btn,
+.btn-primary,
+.btn-hero-primary,
+.btn-learn-more {
+    letter-spacing: 0.5px;
+}
+
+.section-tag {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
