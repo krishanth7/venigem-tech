@@ -1,0 +1,367 @@
+/* ============================================================ 
+   ULTRA-PREMIUM BRAND CORPORATE DESIGN - VENIGEM ADVANCED
+   ============================================================ */
+
+:root {
+    --brand-blue: #059899;
+    --brand-cyan: #06b6d4;
+    --brand-dark: #020617;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==================== EXPANSIVE BRAND HERO ==================== */
+.products-hero {
+    position: relative;
+    padding: 220px 0 140px;
+    background: var(--brand-dark);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-visual-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(2,6,23,0.4) 0%, var(--brand-dark) 100%), url('hero-ras.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 1;
+    filter: grayscale(80%) contrast(1.2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-pre-title {
+    display: block;
+    color: var(--brand-blue);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 35px;
+    letter-spacing: -2px;
+}
+
+.hero-desc {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+
+
+/* ==================== ULTRA-PREMIUM PRODUCT SECTIONS ==================== */
+.premium-showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-section {
+    padding: 140px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.pro-section.bg-light {
+    background-color: var(--bg-light);
+}
+
+.pro-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.pro-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.pro-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.pro-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pro-index {
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.pro-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--text-muted);
+    opacity: 0.5;
+}
+
+.pro-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--brand-blue);
+}
+
+.pro-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.pro-desc {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+/* Minimalist Editorial Specs Link */
+.pro-specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.pro-specs-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-size: 1rem;
+}
+
+.pro-specs-list span {
+    color: var(--text-secondary);
+}
+
+.pro-specs-list strong {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+.pro-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.pro-btn-primary {
+    background: var(--brand-dark);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.pro-btn-primary:hover {
+    background: var(--brand-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(5,152,153,0.3);
+}
+
+.pro-btn-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.pro-btn-link:hover {
+    color: var(--brand-blue);
+    gap: 12px;
+}
+
+/* The Visual Side */
+.pro-visual {
+    flex: 1.2;
+    position: relative;
+    width: 100%;
+}
+
+.pro-image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #e2e8f0;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pro-image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.pro-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pro-section:hover .pro-image-wrapper img {
+    transform: scale(1.03);
+}
+
+.dark-mockup {
+    background: #0f172a;
+}
+
+.water-mark-icon {
+    font-size: 150px;
+    color: rgba(255,255,255,0.03);
+}
+
+/* ==================== GLOBAL FOOTER CTA (WIDE) ==================== */
+.cta-banner {
+    padding: 120px 5%;
+    background: var(--bg-white);
+}
+
+.cta-wide-box {
+    background: var(--brand-dark);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+}
+
+.cta-info {
+    margin-bottom: 40px;
+}
+
+.cta-info h2 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.cta-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.btn-cta-wide {
+    display: inline-block;
+    padding: 24px 60px;
+    background: #fff;
+    color: var(--brand-dark);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn-cta-wide:hover {
+    background: var(--brand-blue);
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .pro-container, .pro-container.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pro-meta {
+        justify-content: center;
+    }
+    .pro-specs-list li {
+        text-align: left;
+    }
+    .pro-actions {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .cta-info h2 {
+        font-size: 2.5rem;
+    }
+    .cta-wide-box {
+        padding: 60px 30px;
+    }
+}

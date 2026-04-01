@@ -1,0 +1,431 @@
+/* --- CSS Reset & Variables --- */
+:root {
+    --bg-main: #ffffff;
+    --bg-header: #ffffff;
+    --bg-header-scrolled: rgba(255, 255, 255, 0.95);
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-nav: #334155;
+    --text-nav-hover: #0f172a;
+
+    --brand-cyan: #0ea5e9;
+    --brand-blue: #059899;
+    --brand-accent: #047879;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Top Bar Styling --- */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: var(--brand-accent);
+    color: #ffffff;
+    z-index: 1002;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-info {
+    display: flex;
+    gap: 24px;
+}
+
+.top-bar-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.top-bar-info i {
+    font-size: 14px;
+}
+
+.top-bar-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.top-bar-socials a {
+    color: #ffffff;
+    transition: opacity 0.3s ease;
+}
+
+.top-bar-socials a:hover {
+    opacity: 0.7;
+}
+
+/* --- Header Styling --- */
+.main-header {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 24px 0;
+    transition: all 0.4s var(--transition);
+    background-color: var(--bg-header);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.main-header.scrolled {
+    top: 0;
+    padding: 16px 0;
+    background: var(--bg-header-scrolled);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Brand Logo --- */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.main-logo-image {
+    max-height: 48px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.brand-logo:hover .main-logo-image {
+    transform: scale(1.05);
+}
+
+/* --- Desktop Navigation --- */
+.desktop-nav {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-nav);
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link i {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--brand-blue);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--brand-blue);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .nav-link i {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 260px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s var(--transition);
+    box-shadow: var(--shadow-lg);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    color: var(--text-nav);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a i {
+    color: var(--brand-cyan);
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #f8fafc;
+    color: var(--brand-blue);
+    transform: translateX(5px);
+}
+
+.dropdown-content a:hover i {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- Action Buttons --- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    position: relative;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: var(--brand-blue);
+    border: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(5, 152, 153, 0.25);
+}
+
+.btn-primary .btn-text {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 152, 153, 0.35);
+}
+
+/* --- Mobile Menu Toggle --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Nav Structure */
+.mobile-nav-close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 40px;
+}
+
+#closeMenuBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* --- Mobile Navigation --- */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    transform: translateY(-20px);
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.m-link {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-nav);
+    transition: color 0.3s ease;
+}
+
+.m-link:hover,
+.m-link.active {
+    color: var(--brand-blue);
+}
+
+.mobile-quote {
+    padding: 14px 40px;
+}
+
+/* --- Responsive Media Queries --- */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header-actions .btn-primary {
+        display: none;
+    }
+
+    .header-container {
+        padding: 0 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+
+    .main-header {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-logo-image {
+        max-height: 36px;
+    }
+
+    .mobile-nav-close {
+        padding: 20px 24px;
+    }
+}

@@ -1,0 +1,588 @@
+/* ============================================================
+   CONTACT.CSS — Venigem Advanced Technologies
+   Premium Corporate Contact Page
+   ============================================================ */
+
+/* ==================== CONTACT PAGE BASE ==================== */
+.contact-page {
+    background: #f8fafc;
+}
+
+/* ==================== DARK HERO BANNER ==================== */
+.ct-hero {
+    position: relative;
+    padding: 180px 0 100px;
+    background: linear-gradient(160deg, #0a0f1e 0%, #0d1528 50%, #0a1828 100%);
+    overflow: hidden;
+    text-align: center;
+}
+
+.ct-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ct-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+}
+
+.ct-glow-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--brand-blue);
+    top: -150px;
+    left: -100px;
+}
+
+.ct-glow-2 {
+    width: 400px;
+    height: 400px;
+    background: #0ea5e9;
+    bottom: -120px;
+    right: -80px;
+}
+
+.ct-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Breadcrumb */
+.ct-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 36px;
+    font-weight: 500;
+}
+
+.ct-breadcrumb a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.ct-breadcrumb a:hover {
+    color: var(--brand-blue);
+}
+
+.ct-breadcrumb i {
+    font-size: 10px;
+    opacity: 0.4;
+}
+
+.ct-breadcrumb span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ct-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.ct-hero p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* ==================== CONTACT INFO STRIP ==================== */
+.ct-info-strip {
+    padding: 0;
+    position: relative;
+    z-index: 10;
+    margin-top: -60px;
+}
+
+.ct-info-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.ct-info-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px 28px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+}
+
+.ct-info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.ct-info-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--brand-blue), #0ea5e9);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 20px;
+}
+
+.ct-info-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.ct-info-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.ct-info-card p a {
+    color: var(--brand-blue);
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.ct-info-card p a:hover {
+    color: var(--brand-accent);
+}
+
+.ct-info-note {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.ct-social-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.ct-social-row a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(5, 152, 153, 0.08);
+    color: var(--brand-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.ct-social-row a:hover {
+    background: var(--brand-blue);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* ==================== FORM + MAP SECTION ==================== */
+.ct-main {
+    padding: 80px 0 100px;
+}
+
+.ct-main-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* === Contact Form === */
+.ct-form-wrapper {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 48px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.ct-form-header {
+    margin-bottom: 36px;
+}
+
+.ct-form-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.ct-form-header p {
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.ct-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ct-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.ct-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ct-field label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.2px;
+}
+
+.ct-field label .req {
+    color: #ef4444;
+}
+
+.ct-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.ct-input-box i {
+    position: absolute;
+    left: 18px;
+    color: var(--brand-blue);
+    font-size: 15px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.ct-input-box input,
+.ct-input-box select {
+    width: 100%;
+    padding: 16px 18px 16px 50px;
+    background: #f8fafc;
+    border: 2px solid #e8ecf1;
+    border-radius: 14px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.3s ease;
+    appearance: auto;
+}
+
+.ct-input-box input:focus,
+.ct-input-box select:focus {
+    background: #ffffff;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 5px rgba(5, 152, 153, 0.06);
+}
+
+.ct-input-box:focus-within i {
+    opacity: 1;
+}
+
+.ct-field textarea {
+    width: 100%;
+    padding: 18px 20px;
+    background: #f8fafc;
+    border: 2px solid #e8ecf1;
+    border-radius: 14px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-primary);
+    outline: none;
+    resize: vertical;
+    min-height: 120px;
+    transition: all 0.3s ease;
+}
+
+.ct-field textarea:focus {
+    background: #ffffff;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 5px rgba(5, 152, 153, 0.06);
+}
+
+/* Submit Button */
+.ct-submit-btn {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, #0a1122 0%, #111a2e 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ct-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(5, 152, 153, 0.15), transparent);
+    transition: left 0.6s ease;
+}
+
+.ct-submit-btn:hover::before {
+    left: 100%;
+}
+
+.ct-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(10, 17, 34, 0.25);
+}
+
+.ct-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Success Message */
+.ct-success {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.ct-success.active {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ct-success i {
+    font-size: 56px;
+    color: #10b981;
+    margin-bottom: 24px;
+}
+
+.ct-success h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.ct-success p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+
+/* ==================== MAP CARD ==================== */
+.ct-map-card {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+}
+
+.ct-map-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 28px;
+    background: linear-gradient(135deg, #0a1122, #111a2e);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ct-map-label i {
+    color: var(--brand-blue);
+    font-size: 18px;
+}
+
+.ct-map-frame {
+    width: 100%;
+    height: 380px;
+    position: relative;
+}
+
+.ct-map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: contrast(1.05);
+    transition: filter 0.3s ease;
+}
+
+.ct-map-frame iframe:hover {
+    filter: contrast(1);
+}
+
+.ct-map-footer {
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.ct-map-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.ct-map-address i {
+    color: var(--brand-blue);
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.ct-map-address strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.ct-map-address p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.ct-directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--brand-blue);
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.ct-directions-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(5, 152, 153, 0.3);
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+@media screen and (max-width: 1100px) {
+    .ct-info-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ct-main-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ct-hero {
+        padding: 160px 0 80px;
+    }
+
+    .ct-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .ct-info-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ct-form-wrapper {
+        padding: 32px 24px;
+    }
+
+    .ct-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-map-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ct-directions-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ct-hero h1 {
+        font-size: 2rem;
+    }
+
+    .ct-info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-info-card {
+        padding: 28px 20px;
+    }
+}
