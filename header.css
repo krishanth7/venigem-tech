@@ -46,6 +46,7 @@
     align-items: center;
     gap: 8px;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .top-strip-langs {
@@ -55,13 +56,22 @@
 }
 
 .lang-pill {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: transparent;
-    border-radius: 4px;
-    padding: 2px 6px;
-    font-size: 18px;
-    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #f8fafc;
+    line-height: 1.1;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-pill:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .main-header {
@@ -73,6 +83,7 @@
     z-index: 1000;
     border-bottom: 1px solid var(--line);
     transition: all 0.3s ease;
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
 }
 
 .main-header.scrolled {
@@ -156,6 +167,17 @@
 .btn-primary:hover {
     background: #000;
     transform: translateY(-1px);
+}
+
+.top-strip-link:focus-visible,
+.lang-pill:focus-visible,
+.nav-link:focus-visible,
+.btn-primary:focus-visible,
+.menu-toggle:focus-visible,
+.m-link:focus-visible,
+.mobile-nav-close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .menu-toggle {

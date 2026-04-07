@@ -26,6 +26,8 @@ body {
     color: var(--corp-text);
     background: linear-gradient(180deg, #f8fafc 0%, var(--corp-bg) 100%);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 a {
