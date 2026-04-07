@@ -13,6 +13,7 @@
     <meta property="og:title" content="Terms of Service | Venigem Advanced Technologies">
     <meta property="og:description" content="Read the Terms of Service for engaging with Venigem Advanced Technologies.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="footer.css">
@@ -23,62 +24,55 @@
 </head>
 
 <body>
-    <!-- ==================== TOP BAR ==================== -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="top-bar-info">
-                <span><i class="fa-solid fa-envelope"></i> venigem.tech@gmail.com</span>
-                <span><i class="fa-solid fa-phone"></i> +91 95050 58549</span>
-            </div>
-            <div class="top-bar-socials">
-                <a href="https://www.instagram.com/vat_filtration/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/people/VAT-Filtration/61581538501390/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.youtube.com/@venigem" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    <!-- ==================== HEADER SECTION ==================== -->
+    <div class="top-strip">
+        <div class="top-strip-container">
+            <a href="Products.html" class="top-strip-link"><i class="fa-solid fa-file-arrow-down"></i> Equipment Catalog</a>
+            <div class="top-strip-langs" aria-label="Language selector">
+                <button type="button" class="lang-pill" aria-label="English">GB</button>
+                <button type="button" class="lang-pill" aria-label="Norwegian">NO</button>
             </div>
         </div>
     </div>
 
-    <!-- ==================== HEADER ==================== -->
     <header class="main-header" id="header">
         <div class="header-container">
-            <a href="/" class="brand-logo">
-                <img src="logo.webp" alt="Venigem Advanced Technologies" class="main-logo-image">
+            <a href="/" class="brand-logo" aria-label="VAT Home">
+                <img src="logo.webp" alt="VAT Logo" class="main-logo-image">
             </a>
-            <nav class="desktop-nav">
+
+            <nav class="desktop-nav" aria-label="Primary">
                 <ul class="nav-links">
                     <li><a href="/" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="Products.html" class="nav-link">Products</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
+
             <div class="header-actions">
-                <a href="quote.html" class="btn-primary">
-                    <span class="btn-text">Get a Quote</span>
-                </a>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <a href="quote.html" class="btn-primary">Get a Quote</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileNav">
+                    <span class="menu-label">Menu</span>
+                    <div class="hamburger-box">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </div>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
     <div class="mobile-nav-overlay" id="mobileNav">
-        <div class="mobile-nav-close">
-            <button id="closeMenuBtn" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
-        </div>
+        <button class="mobile-nav-close" id="closeMenuBtn" aria-label="Close Menu">&times;</button>
         <ul class="mobile-links">
             <li><a href="/" class="m-link">Home</a></li>
-            <li><a href="about.html" class="m-link">About Us</a></li>
+            <li><a href="about.html" class="m-link">About</a></li>
             <li><a href="Products.html" class="m-link">Products</a></li>
             <li><a href="contact.html" class="m-link">Contact</a></li>
         </ul>
-        <a href="quote.html" class="btn-primary mobile-quote">
-            <span class="btn-text">Get a Quote</span>
-        </a>
+        <a href="quote.html" class="btn-primary mobile-quote">Get a Quote</a>
     </div>
 
     <main>
